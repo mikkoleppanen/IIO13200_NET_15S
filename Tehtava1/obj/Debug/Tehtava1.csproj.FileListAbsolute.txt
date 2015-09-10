@@ -29,3 +29,14 @@ Z:\IIO13200\Tehtava1\obj\Debug\Tehtava1.csproj.GenerateResource.Cache
 Z:\Github\IIO13200_NET_15S\Tehtava1\bin\Debug\Ikkunat.exe.config
 Z:\Github\IIO13200_NET_15S\Tehtava1\obj\Debug\Ikkunat.exe
 Z:\Github\IIO13200_NET_15S\Tehtava1\obj\Debug\Ikkunat.pdb
+Z:\Github\IIO13200_NET_15S\Tehtava1\bin\Debug\Ikkunat.exe
+Z:\Github\IIO13200_NET_15S\Tehtava1\bin\Debug\Ikkunat.pdb
+Z:\Github\IIO13200_NET_15S\Tehtava1\obj\Debug\Tehtava1.csprojResolveAssemblyReference.cache
+Z:\Github\IIO13200_NET_15S\Tehtava1\obj\Debug\MainWindow.g.cs
+Z:\Github\IIO13200_NET_15S\Tehtava1\obj\Debug\App.g.cs
+Z:\Github\IIO13200_NET_15S\Tehtava1\obj\Debug\Ikkunat_MarkupCompile.cache
+Z:\Github\IIO13200_NET_15S\Tehtava1\obj\Debug\Ikkunat_MarkupCompile.lref
+Z:\Github\IIO13200_NET_15S\Tehtava1\obj\Debug\MainWindow.baml
+Z:\Github\IIO13200_NET_15S\Tehtava1\obj\Debug\Ikkunat.g.resources
+Z:\Github\IIO13200_NET_15S\Tehtava1\obj\Debug\Tehtava1.Properties.Resources.resources
+Z:\Github\IIO13200_NET_15S\Tehtava1\obj\Debug\Tehtava1.csproj.GenerateResource.Cache

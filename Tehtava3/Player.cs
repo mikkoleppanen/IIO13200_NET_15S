@@ -8,11 +8,15 @@ namespace Tehtava3
 {
     class Player
     {
-        private String firstName;
-        private String lastName;
-        public String fullName;
-        private String team;
-        private int price;
+        public String firstName { get; set; }
+        public String lastName { get; set; }
+        public String team { get; set; }
+        public int price { get; set; }
+        public String fullName
+        {
+            get { return firstName + " " + lastName + ", " + team; }
+        }
+
 
         public Player(String firstName, String lastName, String team, int price)
         {
@@ -34,7 +38,6 @@ namespace Tehtava3
             this.team = team;
             this.price = price;
 
-            this.fullName = firstName + " " + lastName + ", " + team;
         }
     }
 }

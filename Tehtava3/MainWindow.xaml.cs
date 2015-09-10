@@ -22,9 +22,9 @@ namespace Tehtava3
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<Player> playerList = new List<Player>();
+        ObservableCollection<Player> playerList = new ObservableCollection<Player>();
 
-        public ObservableCollection<string> list = new ObservableCollection<string>(new String[]
+        ObservableCollection<string> list = new ObservableCollection<string>(new String[]
         { "TPS", "Lukko", "Ässät", "HIFK", "Blues", "HPK", "Tappara",
             "Ilves", "Sport", "Pelicans", "KooKoo", "SaiPa", "Kärpät",
             "JYP", "KalPa" });
@@ -33,13 +33,16 @@ namespace Tehtava3
         {
             InitializeComponent();
 
-            this.cmbTeam.ItemsSource = list;
+            lsbPlayers.ItemsSource = playerList;
+            lsbPlayers.DisplayMemberPath = "fullName";
 
+            cmbTeam.ItemsSource = list;
+            cmbTeam.SelectedItem = list.First();
         }
 
         private void btnNew_Click(object sender, RoutedEventArgs e)
         {
-            var regexItem = new Regex("^[a-zA-Z -]*$");
+            var regexItem = new Regex("^[a-zA-Z ]*$");
             String firstName = txtFirstName.Text;
             String lastName = txtLastName.Text;
             String team = cmbTeam.Text;
@@ -76,5 +79,35 @@ namespace Tehtava3
             return false;
         }
 
+        private void lsbPlayers_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                Player temp = (Player)lsbPlayers.SelectedItem;
+                txtFirstName.Text = temp.firstName;
+                txtLastName.Text = temp.lastName;
+                txtPrice.Text = temp.price.ToString();
+                cmbTeam.Text = temp.team;
+            }
+            catch
+            {
+                emptyTxt();
+            }
+
+        }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            int index = cmbTeam.SelectedIndex;
+            emptyTxt();
+            playerList.RemoveAt(index);
+        }
+
+        private void emptyTxt()
+        {
+            txtFirstName.Text = "";
+            txtLastName.Text = "";
+            txtPrice.Text = "";
+        }
     }
 }
