@@ -92,9 +92,11 @@ namespace Tehtava3
             catch
             {
                 emptyTxt();
+                
             }
 
         }
+        //cmbTeam.Items.Refresh();
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
