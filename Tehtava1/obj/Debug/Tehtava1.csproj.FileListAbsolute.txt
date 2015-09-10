@@ -26,3 +26,6 @@ Z:\IIO13200\Tehtava1\obj\Debug\MainWindow.baml
 Z:\IIO13200\Tehtava1\obj\Debug\Ikkunat.g.resources
 Z:\IIO13200\Tehtava1\obj\Debug\Tehtava1.Properties.Resources.resources
 Z:\IIO13200\Tehtava1\obj\Debug\Tehtava1.csproj.GenerateResource.Cache
+Z:\Github\IIO13200_NET_15S\Tehtava1\bin\Debug\Ikkunat.exe.config
+Z:\Github\IIO13200_NET_15S\Tehtava1\obj\Debug\Ikkunat.exe
+Z:\Github\IIO13200_NET_15S\Tehtava1\obj\Debug\Ikkunat.pdb

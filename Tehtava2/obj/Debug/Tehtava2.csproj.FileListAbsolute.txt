@@ -12,3 +12,6 @@ Z:\IIO13200\Tehtava2\obj\Debug\Tehtava2.csproj.GenerateResource.Cache
 Z:\IIO13200\Tehtava2\obj\Debug\Tehtava2.exe
 Z:\IIO13200\Tehtava2\obj\Debug\Tehtava2.pdb
 Z:\IIO13200\Tehtava2\obj\Debug\Tehtava2.csprojResolveAssemblyReference.cache
+Z:\Github\IIO13200_NET_15S\Tehtava2\bin\Debug\Tehtava2.exe.config
+Z:\Github\IIO13200_NET_15S\Tehtava2\obj\Debug\Tehtava2.exe
+Z:\Github\IIO13200_NET_15S\Tehtava2\obj\Debug\Tehtava2.pdb
