@@ -13,14 +13,15 @@
         <Button x:Name="btnNew" Content="Luo uusi pelaaja" HorizontalAlignment="Left" Margin="254,14,0,0" VerticalAlignment="Top" Width="101" Click="btnNew_Click"/>
         <TextBox x:Name="txtLastName" HorizontalAlignment="Left" Height="23" Margin="95,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154"/>
         <Label x:Name="label_Copy" Content="Sukunimi" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnSave" Content="Talleta pelaaja" HorizontalAlignment="Left" Margin="254,45,0,0" VerticalAlignment="Top" Width="101"/>
+        <Button x:Name="btnSave" Content="Talleta pelaaja" HorizontalAlignment="Left" Margin="254,45,0,0" VerticalAlignment="Top" Width="101" Click="btnSave_Click"/>
         <TextBox x:Name="txtPrice" HorizontalAlignment="Left" Height="23" Margin="95,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154"/>
         <Label x:Name="label_Copy1" Content="Siirtohinta" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnDelete" Content="Poista pelaaja" HorizontalAlignment="Left" Margin="254,76,0,0" VerticalAlignment="Top" Width="101" Click="btnDelete_Click"/>
-        <Button x:Name="btnWrite" Content="Kirjoita pelaajat" HorizontalAlignment="Left" Margin="254,107,0,0" VerticalAlignment="Top" Width="101"/>
-        <Button x:Name="btnClose" Content="Lopetus" HorizontalAlignment="Left" Margin="254,138,0,0" VerticalAlignment="Top" Width="101"/>
+        <Button x:Name="btnWrite" Content="Kirjoita pelaajat" HorizontalAlignment="Left" Margin="254,107,0,0" VerticalAlignment="Top" Width="101" Click="btnWrite_Click"/>
+        <Button x:Name="btnClose" Content="Lopetus" HorizontalAlignment="Left" Margin="254,138,0,0" VerticalAlignment="Top" Width="101" Click="btnClose_Click"/>
         <Label x:Name="label_Copy2" Content="Seura" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top"/>
-        <ListBox x:Name="lsbPlayers" HorizontalAlignment="Left" Height="196" Margin="360,14,0,0" VerticalAlignment="Top" Width="272" SelectionChanged="lsbPlayers_SelectionChanged"/>
+        <ListBox x:Name="lsbPlayers" HorizontalAlignment="Left" Height="177" Margin="360,14,0,0" VerticalAlignment="Top" Width="272" SelectionChanged="lsbPlayers_SelectionChanged"/>
+        <StatusBar HorizontalAlignment="Left" Height="24" Margin="0,196,0,0" VerticalAlignment="Top" Width="643"/>
 
     </Grid>
 </Window>

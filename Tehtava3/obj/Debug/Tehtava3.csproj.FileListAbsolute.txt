@@ -12,3 +12,17 @@ Z:\Github\IIO13200_NET_15S\Tehtava3\obj\Debug\Tehtava3.Properties.Resources.reso
 Z:\Github\IIO13200_NET_15S\Tehtava3\obj\Debug\Tehtava3.csproj.GenerateResource.Cache
 Z:\Github\IIO13200_NET_15S\Tehtava3\obj\Debug\Tehtava3.exe
 Z:\Github\IIO13200_NET_15S\Tehtava3\obj\Debug\Tehtava3.pdb
+E:\Github\IIO13200_NET_15S\Tehtava3\bin\Debug\Tehtava3.exe.config
+E:\Github\IIO13200_NET_15S\Tehtava3\obj\Debug\Tehtava3.exe
+E:\Github\IIO13200_NET_15S\Tehtava3\obj\Debug\Tehtava3.pdb
+E:\Github\IIO13200_NET_15S\Tehtava3\bin\Debug\Tehtava3.exe
+E:\Github\IIO13200_NET_15S\Tehtava3\bin\Debug\Tehtava3.pdb
+E:\Github\IIO13200_NET_15S\Tehtava3\obj\Debug\Tehtava3.csprojResolveAssemblyReference.cache
+E:\Github\IIO13200_NET_15S\Tehtava3\obj\Debug\MainWindow.g.cs
+E:\Github\IIO13200_NET_15S\Tehtava3\obj\Debug\App.g.cs
+E:\Github\IIO13200_NET_15S\Tehtava3\obj\Debug\Tehtava3_MarkupCompile.cache
+E:\Github\IIO13200_NET_15S\Tehtava3\obj\Debug\Tehtava3_MarkupCompile.lref
+E:\Github\IIO13200_NET_15S\Tehtava3\obj\Debug\MainWindow.baml
+E:\Github\IIO13200_NET_15S\Tehtava3\obj\Debug\Tehtava3.g.resources
+E:\Github\IIO13200_NET_15S\Tehtava3\obj\Debug\Tehtava3.Properties.Resources.resources
+E:\Github\IIO13200_NET_15S\Tehtava3\obj\Debug\Tehtava3.csproj.GenerateResource.Cache

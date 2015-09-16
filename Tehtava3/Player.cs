@@ -39,5 +39,10 @@ namespace Tehtava3
             this.price = price;
 
         }
+
+        public String Print()
+        {
+            return this.firstName + "," + this.lastName + "," + this.team + "," + this.price.ToString() + System.Environment.NewLine;
+        }
     }
 }
