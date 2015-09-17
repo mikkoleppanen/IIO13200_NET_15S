@@ -46,18 +46,24 @@ namespace Tehtava3
                 if(!playerList.Any())
                 {
                     playerList.Add(new Player(firstName, lastName, team, price));
+                    lblStatusBox.Text = "Pelaaja lisätty.";
                 }
                 else if(!Exists(firstName, lastName))
                 {
                     playerList.Add(new Player(firstName, lastName, team, price));
+                    lblStatusBox.Text = "Pelaaja lisätty.";
                 }
                 else
                 {
-                    //Virheilmoitus!
+                    lblStatusBox.Text = "Virhe: Pelaaja löytyy jo luettelosta.";
                 }
 
             }
-            
+            else
+            {
+                lblStatusBox.Text = "Virhe: Kentissä käytetty vääriä merkkejä!";
+            }
+
         }
 
         private bool Exists(String firstName, String lastName)
@@ -89,13 +95,13 @@ namespace Tehtava3
             }
 
         }
-        //cmbTeam.Items.Refresh();
-
+        
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
             int index = lsbPlayers.SelectedIndex;
             emptyTxt();
             playerList.RemoveAt(index);
+            lblStatusBox.Text = "Pelaaja poistettu.";
         }
 
         private void emptyTxt()
@@ -117,6 +123,11 @@ namespace Tehtava3
             {
                 playerList[lsbPlayers.SelectedIndex].ChangePlayer(firstName, lastName, team, price);
                 lsbPlayers.Items.Refresh();
+                lblStatusBox.Text = "Pelaajan tietoja muutettu.";
+            }
+            else
+            {
+                lblStatusBox.Text = "Virhe: Kentissä käytetty vääriä merkkejä!";
             }
         }
 
@@ -148,6 +159,11 @@ namespace Tehtava3
                 fs.Write(tempBytes, 0, tempBytes.Length);
 
                 fs.Close();
+                lblStatusBox.Text = "Pelaajien tiedot kirjoitettu tiedostoon.";
+            }
+            else
+            {
+                lblStatusBox.Text = "Tiedostoa ei voitu tallentaa. Anna tiedostolle kunnollinen nimi.";
             }
         }
     }
