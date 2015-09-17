@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using Microsoft.Win32;
 using System.IO;
 using System.Text;
+using System.Configuration;
 
 namespace Tehtava3
 {
@@ -31,6 +32,17 @@ namespace Tehtava3
 
             cmbTeam.ItemsSource = list;
             cmbTeam.SelectedItem = list.First();
+
+            String fileName = ConfigurationManager.AppSettings["DataFile"];
+
+            if(fileName != "")
+            {
+                string[] lines = System.IO.File.ReadAllLines(fileName);
+                foreach (string line in lines)
+                {
+                    playerList.Add(new Player(line));
+                }
+            }
         }
 
         private void btnNew_Click(object sender, RoutedEventArgs e)
@@ -150,21 +162,31 @@ namespace Tehtava3
                 // Saves the Image via a FileStream created by the OpenFile method.
                 FileStream fs = (FileStream)saveFileDialog1.OpenFile();
 
-                for (int i = 0; i < playerList.Count; i++)
+                foreach (Player player in playerList)
                 {
-                    temp += playerList[i].Print();
+                    temp += player.Print();
                 }
 
                 byte[] tempBytes = new UTF8Encoding(true).GetBytes(temp);
                 fs.Write(tempBytes, 0, tempBytes.Length);
 
                 fs.Close();
+                UpdateConfig(saveFileDialog1.FileName);
                 lblStatusBox.Text = "Pelaajien tiedot kirjoitettu tiedostoon.";
             }
             else
             {
                 lblStatusBox.Text = "Tiedostoa ei voitu tallentaa. Anna tiedostolle kunnollinen nimi.";
             }
+        }
+
+        private void UpdateConfig(String fileName)
+        {
+            var configFile = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            var settings = configFile.AppSettings.Settings;
+            settings["DataFile"].Value = fileName;
+            configFile.Save(ConfigurationSaveMode.Modified);
+            ConfigurationManager.RefreshSection(configFile.AppSettings.SectionInformation.Name);
         }
     }
 }

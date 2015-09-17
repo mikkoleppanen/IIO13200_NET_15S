@@ -23,6 +23,17 @@ namespace Tehtava3
             this.ChangePlayer(firstName, lastName, team, price);
         }
 
+        public Player(String line)
+        {
+            String[] oneWord = line.Split(',');
+            this.firstName = oneWord[0];
+            this.lastName = oneWord[1];
+            this.team = oneWord[2];
+            this.price = Int32.Parse(oneWord[3]);
+
+            this.ChangePlayer(firstName, lastName, team, price);
+        }
+
         public bool NameExists(String firstName, String lastName)
         {
             if (this.firstName == firstName && this.lastName == lastName)
