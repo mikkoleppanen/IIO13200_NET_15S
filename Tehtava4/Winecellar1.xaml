@@ -7,22 +7,17 @@
         mc:Ignorable="d"
         Title="Winecellar1" Height="500" Width="400">
     <Grid>
-        <Grid.Resources>
-            <XmlDataProvider x:Key="winedata"
-                             Source="Viinit1.xml"
-                             XPath="viinikellari/wine">
-            </XmlDataProvider>
-        </Grid.Resources>
-        <DataGrid x:Name="dgWines" DataContext="{StaticResource winedata}"
-                  ItemsSource="{Binding}" AutoGenerateColumns="False" Margin="0,37,0,0">
+        <DataGrid x:Name="dgWines" ItemsSource="{Binding Path=Elements[wine]}"
+                  AutoGenerateColumns="False" Margin="0,37,0,0">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Viini" Binding="{Binding XPath=nimi}"/>
-                <DataGridTextColumn Header="Maa" Binding="{Binding XPath=maa}"/>
-                <DataGridTextColumn Header="Arvio" Binding="{Binding XPath=arvio}"/>
+                <DataGridTextColumn Header="Viini" Binding="{Binding Path=Element[nimi].Value}"/>
+                <DataGridTextColumn Header="Maa" Binding="{Binding Path=Element[maa].Value}"/>
+                <DataGridTextColumn Header="Arvio" Binding="{Binding Path=Element[arvio].Value}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <ComboBox x:Name="cmbCountry" DataContext="{StaticResource winedata}"
-                  ItemsSource="{Binding}" DisplayMemberPath="maa" HorizontalAlignment="Left"
+        <ComboBox x:Name="cmbCountry" HorizontalAlignment="Left"
                   Margin="196,10,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnSort" Content="Hae viinit" HorizontalAlignment="Left" Height="22" Margin="36,10,0,0" VerticalAlignment="Top" Width="122" Click="btnSort_Click"/>
+
     </Grid>
 </Window>
