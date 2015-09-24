@@ -7,13 +7,8 @@
         mc:Ignorable="d"
         Title="Winecellar1" Height="500" Width="400">
     <Grid>
-        <DataGrid x:Name="dgWines" ItemsSource="{Binding Path=Elements[wine]}"
-                  AutoGenerateColumns="False" Margin="0,37,0,0">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Viini" Binding="{Binding Path=Element[nimi].Value}"/>
-                <DataGridTextColumn Header="Maa" Binding="{Binding Path=Element[maa].Value}"/>
-                <DataGridTextColumn Header="Arvio" Binding="{Binding Path=Element[arvio].Value}"/>
-            </DataGrid.Columns>
+        <DataGrid x:Name="dgWines"
+                  AutoGenerateColumns="True" Margin="0,37,0,0">
         </DataGrid>
         <ComboBox x:Name="cmbCountry" HorizontalAlignment="Left"
                   Margin="196,10,0,0" VerticalAlignment="Top" Width="120"/>

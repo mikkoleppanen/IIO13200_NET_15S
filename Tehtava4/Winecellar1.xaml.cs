@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -24,15 +25,18 @@ namespace Tehtava4
     {
         public String User = "";
         public ObservableCollection<string> list = new ObservableCollection<string>();
+        public String xmlDocName = "";
         public Winecellar1()
         {
             InitializeComponent();
+            xmlDocName = ConfigurationManager.AppSettings["DataFile"];
 
-            var xmlDoc = XDocument.Load("E:/Github/IIO13200_NET_15S/Tehtava4/Viinit1.xml").Root;
-            dgWines.DataContext = xmlDoc;
+            doLinqQuery();
+            var xmlDoc = XDocument.Load(xmlDocName).Root;
 
             var countries = from s in xmlDoc.Descendants("wine") select s.Element("maa").Value;
 
+            list.Add("Kaikki");
             foreach (String country in countries)
             {
                 if(!list.Contains(country))
@@ -44,19 +48,41 @@ namespace Tehtava4
             this.cmbCountry.ItemsSource = list;
         }
 
+        private void doLinqQuery()
+        {
+            var xmlDoc = XDocument.Load(xmlDocName).Root;
+            String strCountry = this.cmbCountry.Text;
+            if (strCountry == "" || strCountry == "Kaikki")
+            {
+                var query = (from el in xmlDoc.Descendants("wine")
+                             select new
+                             {
+                                 Nimi = el.Element("nimi").Value,
+                                 Maa = el.Element("maa").Value,
+                                 Arvio = el.Element("arvio").Value
+                             }).ToList();
+                this.dgWines.ItemsSource = "";
+                this.dgWines.ItemsSource = query;
+            }
+            else
+            {
+                var query = (from el in xmlDoc.Descendants("wine")
+                             where (el.Element("maa").Value == this.cmbCountry.Text)
+                             select new
+                             {
+                                 Nimi = el.Element("nimi").Value,
+                                 Maa = el.Element("maa").Value,
+                                 Arvio = el.Element("arvio").Value
+                             }).ToList();
+                this.dgWines.ItemsSource = "";
+                this.dgWines.ItemsSource = query;
+            }
+        }
+
         private void btnSort_Click(object sender, RoutedEventArgs e)
         {
-            var xmlDoc = XDocument.Load("E:/Github/IIO13200_NET_15S/Tehtava4/Viinit1.xml").Root;
-           /* var query = from p in xmlDoc.Descendants("wine")
-                        where p.Element("maa").Value == this.cmbCountry.Text
-                        group p by p.Element("maa");*/
 
-            var query = from p in xmlDoc.Descendants("wine")
-                          where p.Element("maa").Value == this.cmbCountry.Text
-                          select p;
-
-            this.dgWines.DataContext = query;
-            this.dgWines.Items.Refresh();
+            doLinqQuery();
         }
     }
 }
