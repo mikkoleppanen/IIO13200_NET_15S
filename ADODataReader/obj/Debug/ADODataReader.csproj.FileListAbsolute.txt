@@ -1,0 +1,6 @@
+Z:\Github\IIO13200_NET_15S\ADODataReader\bin\Debug\ADODataReader.exe.config
+Z:\Github\IIO13200_NET_15S\ADODataReader\bin\Debug\ADODataReader.exe
+Z:\Github\IIO13200_NET_15S\ADODataReader\bin\Debug\ADODataReader.pdb
+Z:\Github\IIO13200_NET_15S\ADODataReader\obj\Debug\ADODataReader.csprojResolveAssemblyReference.cache
+Z:\Github\IIO13200_NET_15S\ADODataReader\obj\Debug\ADODataReader.exe
+Z:\Github\IIO13200_NET_15S\ADODataReader\obj\Debug\ADODataReader.pdb

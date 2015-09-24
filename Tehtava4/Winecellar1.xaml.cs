@@ -23,6 +23,7 @@ namespace Tehtava4
     /// </summary>
     public partial class Winecellar1 : Window
     {
+        public XElement xmlDoc;
         public String User = "";
         public ObservableCollection<string> list = new ObservableCollection<string>();
         public String xmlDocName = "";
@@ -31,8 +32,9 @@ namespace Tehtava4
             InitializeComponent();
             xmlDocName = ConfigurationManager.AppSettings["DataFile"];
 
+            xmlDoc = new XElement(XDocument.Load(xmlDocName).Root);
+
             doLinqQuery();
-            var xmlDoc = XDocument.Load(xmlDocName).Root;
 
             var countries = from s in xmlDoc.Descendants("wine") select s.Element("maa").Value;
 
@@ -50,7 +52,6 @@ namespace Tehtava4
 
         private void doLinqQuery()
         {
-            var xmlDoc = XDocument.Load(xmlDocName).Root;
             String strCountry = this.cmbCountry.Text;
             if (strCountry == "" || strCountry == "Kaikki")
             {
