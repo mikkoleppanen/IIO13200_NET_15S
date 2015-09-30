@@ -27,7 +27,12 @@ namespace Tehtava5
 
         private void btnGetDataTable_Click(object sender, RoutedEventArgs e)
         {
-            dgData.DataContext = JAMK.IT.DBDemoxOy.GetDataReal();
+            dgData.DataContext = JAMK.IT.DBDemoxOy.GetDataReal(null);
+        }
+
+        private void btnIDData_Click(object sender, RoutedEventArgs e)
+        {
+            dgData.DataContext = JAMK.IT.DBDemoxOy.GetDataReal(tbID.Text);
         }
     }
 }

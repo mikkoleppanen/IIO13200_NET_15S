@@ -10,13 +10,21 @@ namespace JAMK.IT
 {
     public static class DBDemoxOy
     {
-        public static DataTable GetDataReal()
+        public static DataTable GetDataReal(String ID)
         {
             //DBKerros, haetaan DemoxOy-tietokannasta taulun lasnaolot tietueet
             try
             {
                 String sql;
-                sql = "SELECT asioid, lastname, firstname, date FROM lasnaolot";// WHERE asioid='H3543'";
+
+                if(ID == null)
+                {
+                    sql = "SELECT asioid, lastname, firstname, date FROM lasnaolot";
+                }
+                else
+                {
+                    sql = "SELECT asioid, lastname, firstname, date FROM lasnaolot WHERE asioid='" + ID + "'";
+                }
                 String connStr = @"Data source=eight.labranet.jamk.fi;initial catalog=DemoxOy;user=koodari;password=koodari13";
                 using (SqlConnection conn = new SqlConnection(connStr))
                 {
