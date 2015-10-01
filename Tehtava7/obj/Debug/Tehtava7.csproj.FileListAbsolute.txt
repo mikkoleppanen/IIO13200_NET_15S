@@ -1,0 +1,15 @@
+Z:\Github\IIO13200_NET_15S\Tehtava7\bin\Debug\Tehtava7.exe.config
+Z:\Github\IIO13200_NET_15S\Tehtava7\bin\Debug\Tehtava7.exe
+Z:\Github\IIO13200_NET_15S\Tehtava7\bin\Debug\Tehtava7.pdb
+Z:\Github\IIO13200_NET_15S\Tehtava7\obj\Debug\Tehtava7.csprojResolveAssemblyReference.cache
+Z:\Github\IIO13200_NET_15S\Tehtava7\obj\Debug\MainWindow.g.cs
+Z:\Github\IIO13200_NET_15S\Tehtava7\obj\Debug\App.g.cs
+Z:\Github\IIO13200_NET_15S\Tehtava7\obj\Debug\Tehtava7_MarkupCompile.cache
+Z:\Github\IIO13200_NET_15S\Tehtava7\obj\Debug\Tehtava7_MarkupCompile.lref
+Z:\Github\IIO13200_NET_15S\Tehtava7\obj\Debug\MainWindow.baml
+Z:\Github\IIO13200_NET_15S\Tehtava7\obj\Debug\Tehtava7.g.resources
+Z:\Github\IIO13200_NET_15S\Tehtava7\obj\Debug\Tehtava7.Properties.Resources.resources
+Z:\Github\IIO13200_NET_15S\Tehtava7\obj\Debug\Tehtava7.csproj.GenerateResource.Cache
+Z:\Github\IIO13200_NET_15S\Tehtava7\obj\Debug\Tehtava7.exe
+Z:\Github\IIO13200_NET_15S\Tehtava7\obj\Debug\Tehtava7.pdb
+Z:\Github\IIO13200_NET_15S\Tehtava7\bin\Debug\Newtonsoft.Json.dll

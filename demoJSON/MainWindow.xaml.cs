@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Newtonsoft.Json;
+using System.Net;
+using System.Threading;
 
 namespace demoJSON
 {
@@ -39,9 +41,55 @@ namespace demoJSON
             dgData.DataContext = people;
         }
 
+        private void Demo2()
+        {
+            //Haetaan Json
+            json = GetJsonFromWeb();
+            //Muunnetaan se olioksi
+            List<Politic> people = JsonConvert.DeserializeObject<List<Politic>>(json);
+            //Näytetään UI:ssa
+            txtJSON.Text = json;
+            dgData.DataContext = people;
+        }
+
+        private void Demo2Async()
+        {
+            //Haetaan webistä dataa omassa threadissä
+            new Thread(() =>
+            {
+                String result = GetJsonFromWeb();
+                Dispatcher.BeginInvoke((Action)(() =>
+                {
+                    //Muutetaan poliitikoiksi
+                    txtJSON.Text = result;
+                    List<Politic> people = JsonConvert.DeserializeObject<List<Politic>>(result);
+                    dgData.DataContext = people;
+                }));
+            }).Start();
+            txtJSON.Text = "Haetaan data webistä...";
+        }
+
         private String GetSimpleJson()
         {
             return @"[{'Name':'Olli Opiskelija','Gender':'Male','Birthday':'1995-12-24'},{'Name':'Matti Mieskolainen','Gender':'Male','Birthday':'1985-12-25'}]";
+        }
+
+        private String GetJsonFromWeb()
+        {
+            try
+            {
+                String url = "http://student.labranet.jamk.fi/~salesa/mat/JsonTest";
+                //using vapauttaa muistin sulkeiden lopussa
+                using (WebClient wc = new WebClient())
+                {
+                    return wc.DownloadString(url);
+                }
+            }
+            catch (Exception)
+            {
+                //throw;
+            }
+            return "Homo";
         }
         #endregion
 
@@ -49,7 +97,8 @@ namespace demoJSON
 
         private void btnGetJSON_Click(object sender, RoutedEventArgs e)
         {
-            Demo1();
+            //Vaihda tänne mitä funktiota käytetään
+            Demo2Async();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,8 @@ namespace demoJSON
     public class Politic : Person
     {
         public String Party { get; set; }
-        public String Position { get; set; }
+        //huom jos json atribuutin ja property nimet ovat erit niin käytä seuraavaa
+        [JsonProperty("position")]
+        public String Virka { get; set; }
     }
 }
