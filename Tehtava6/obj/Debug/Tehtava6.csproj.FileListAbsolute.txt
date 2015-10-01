@@ -13,3 +13,6 @@ E:\Github\IIO13200_NET_15S\Tehtava6\obj\Debug\ADONET.g.resources
 E:\Github\IIO13200_NET_15S\Tehtava6\obj\Debug\JAMK.ICT.Properties.Resources.resources
 E:\Github\IIO13200_NET_15S\Tehtava6\obj\Debug\Tehtava6.csproj.GenerateResource.Cache
 E:\Github\IIO13200_NET_15S\Tehtava6\obj\Debug\Tehtava6.csprojResolveAssemblyReference.cache
+Z:\Github\IIO13200_NET_15S\Tehtava6\bin\Debug\ADONET.exe.config
+Z:\Github\IIO13200_NET_15S\Tehtava6\obj\Debug\ADONET.exe
+Z:\Github\IIO13200_NET_15S\Tehtava6\obj\Debug\ADONET.pdb

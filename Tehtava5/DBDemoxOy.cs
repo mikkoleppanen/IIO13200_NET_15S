@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -25,7 +26,7 @@ namespace JAMK.IT
                 {
                     sql = "SELECT asioid, lastname, firstname, date FROM lasnaolot WHERE asioid='" + ID + "'";
                 }
-                String connStr = @"Data source=eight.labranet.jamk.fi;initial catalog=DemoxOy;user=koodari;password=koodari13";
+                String connStr = ConfigurationManager.ConnectionStrings["Lasnaolot"].ConnectionString;//@"Data source=eight.labranet.jamk.fi;initial catalog=DemoxOy;user=koodari;password=koodari13";
                 using (SqlConnection conn = new SqlConnection(connStr))
                 {
                     //Avataan yhteys

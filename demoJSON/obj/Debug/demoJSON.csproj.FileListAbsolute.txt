@@ -1,0 +1,15 @@
+Z:\Github\IIO13200_NET_15S\demoJSON\bin\Debug\demoJSON.exe.config
+Z:\Github\IIO13200_NET_15S\demoJSON\bin\Debug\demoJSON.exe
+Z:\Github\IIO13200_NET_15S\demoJSON\bin\Debug\demoJSON.pdb
+Z:\Github\IIO13200_NET_15S\demoJSON\bin\Debug\Newtonsoft.Json.dll
+Z:\Github\IIO13200_NET_15S\demoJSON\obj\Debug\demoJSON.csprojResolveAssemblyReference.cache
+Z:\Github\IIO13200_NET_15S\demoJSON\obj\Debug\MainWindow.g.cs
+Z:\Github\IIO13200_NET_15S\demoJSON\obj\Debug\App.g.cs
+Z:\Github\IIO13200_NET_15S\demoJSON\obj\Debug\demoJSON_MarkupCompile.cache
+Z:\Github\IIO13200_NET_15S\demoJSON\obj\Debug\demoJSON_MarkupCompile.lref
+Z:\Github\IIO13200_NET_15S\demoJSON\obj\Debug\MainWindow.baml
+Z:\Github\IIO13200_NET_15S\demoJSON\obj\Debug\demoJSON.g.resources
+Z:\Github\IIO13200_NET_15S\demoJSON\obj\Debug\demoJSON.Properties.Resources.resources
+Z:\Github\IIO13200_NET_15S\demoJSON\obj\Debug\demoJSON.csproj.GenerateResource.Cache
+Z:\Github\IIO13200_NET_15S\demoJSON\obj\Debug\demoJSON.exe
+Z:\Github\IIO13200_NET_15S\demoJSON\obj\Debug\demoJSON.pdb

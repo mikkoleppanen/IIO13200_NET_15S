@@ -9,7 +9,7 @@
     <Grid>
         <Button x:Name="btnGetDataTable" Content="Hae läsnäolot (DataTable)" Margin="10,10,0,0" Click="btnGetDataTable_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="145" />
         <DataGrid x:Name="dgData" Margin="10,35,10.4,9.8" ItemsSource="{Binding}" />
-        <TextBox x:Name="tbID" HorizontalAlignment="Left" Height="20" Margin="366,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="142"/>
+        <TextBox x:Name="tbID" HorizontalAlignment="Left" Height="20" Margin="366,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142"/>
         <Button x:Name="btnIDData" Content="Hae läsnäolot ID:lle" HorizontalAlignment="Left" Margin="247,10,0,0" VerticalAlignment="Top" Width="114" Height="20" Click="btnIDData_Click"/>
     </Grid>
 </Window>
