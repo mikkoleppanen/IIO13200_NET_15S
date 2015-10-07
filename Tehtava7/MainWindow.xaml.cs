@@ -50,8 +50,15 @@ namespace Tehtava7
             {
                 Dispatcher.BeginInvoke((Action)(() =>
                 {
-                    dgTrains.DataContext = trains.GetTrains(cbCity.SelectedValue.ToString());
-                    txtUrl.Text = "Valmista!";
+                    if(cbCity.SelectedValue != null)
+                    {
+                        dgTrains.DataContext = trains.GetTrains(cbCity.SelectedValue.ToString());
+                        txtUrl.Text = "Valmista!";
+                    }
+                    else
+                    {
+                        txtUrl.Text = "Valitse asema!";
+                    }
                 }));
             }).Start();
             txtUrl.Text = "Haetaan data webistä...";

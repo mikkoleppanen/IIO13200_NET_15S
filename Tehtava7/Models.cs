@@ -9,9 +9,9 @@ namespace Tehtava7
     class Train
     {
         public String trainNumber { get; set; }
-        public String departureDate { get; set; }
+        public DateTime departureDate { get; set; }
         public bool cancelled { get; set; }
-        //public List<Times> timeTableRows { get; set; }
+        public List<Times> timeTableRows { get; set; }
     }
     class Station
     {
@@ -21,8 +21,14 @@ namespace Tehtava7
 
     class Times
     {
-        public DateTime actualTime { get; set; }
+        public DateTime scheduledTime { get; set; }
         public String type { get; set; }
         public String stationShortCode { get; set; }
+    }
+    class BetterTrain
+    {
+        public String trainNumber { get; set; }
+        public String scheduledTime { get; set; }
+        public bool cancelled { get; set; }
     }
 }

@@ -9,7 +9,8 @@
     <Grid>
         <Button x:Name="btnGet" Content="Hae lähtevät junat" HorizontalAlignment="Left" Margin="174,10,0,0" VerticalAlignment="Top" Width="114" Click="btnGet_Click"/>
         <ComboBox x:Name="cbCity" ItemsSource="{Binding}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="159"/>
-        <DataGrid x:Name="dgTrains" ItemsSource="{Binding}" Margin="10,65,10,10"></DataGrid>
+        <DataGrid x:Name="dgTrains" ItemsSource="{Binding}" Margin="10,65,10,10">
+        </DataGrid>
         <TextBox x:Name="txtUrl"  HorizontalAlignment="Left" Height="23" Margin="10,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="497"/>
     </Grid>
 </Window>
