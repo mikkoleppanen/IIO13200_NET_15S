@@ -1,0 +1,9 @@
+Z:\Github\IIO13200_NET_15S\UnitTestForWinLottoBL\bin\Debug\UnitTestForWinLottoBL.dll
+Z:\Github\IIO13200_NET_15S\UnitTestForWinLottoBL\bin\Debug\UnitTestForWinLottoBL.pdb
+Z:\Github\IIO13200_NET_15S\UnitTestForWinLottoBL\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+Z:\Github\IIO13200_NET_15S\UnitTestForWinLottoBL\bin\Debug\WinLotto.exe
+Z:\Github\IIO13200_NET_15S\UnitTestForWinLottoBL\bin\Debug\WinLotto.pdb
+Z:\Github\IIO13200_NET_15S\UnitTestForWinLottoBL\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+Z:\Github\IIO13200_NET_15S\UnitTestForWinLottoBL\obj\Debug\UnitTestForWinLottoBL.csprojResolveAssemblyReference.cache
+Z:\Github\IIO13200_NET_15S\UnitTestForWinLottoBL\obj\Debug\UnitTestForWinLottoBL.dll
+Z:\Github\IIO13200_NET_15S\UnitTestForWinLottoBL\obj\Debug\UnitTestForWinLottoBL.pdb
