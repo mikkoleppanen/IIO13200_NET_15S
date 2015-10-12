@@ -18,4 +18,31 @@
     <parannettavaa>parannettavaa</parannettavaa>
     <muuta>blaah blaah</muuta>
   </palaute>
+  <palaute>
+    <pvm>20151012</pvm>
+    <tekija>TextBox1</tekija>
+    <opittu>TextBox2</opittu>
+    <haluanoppia>TextBox3</haluanoppia>
+    <hyvaa>TextBox4</hyvaa>
+    <parannettavaa>TextBox5</parannettavaa>
+    <muuta>TextBox6</muuta>
+  </palaute>
+  <palaute>
+    <pvm>20151012</pvm>
+    <tekija>Mikko</tekija>
+    <opittu>Oikeasti c# koodaamaan toisin kuin edellisell‰ kurssilla</opittu>
+    <haluanoppia>Kaikkea kivaa</haluanoppia>
+    <hyvaa>Hyv‰ ope</hyvaa>
+    <parannettavaa>Palautusp‰iv‰t voisivat olla tarkkaan m‰‰ritelty.</parannettavaa>
+    <muuta>Bl‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰h</muuta>
+  </palaute>
+  <palaute>
+    <pvm>20151012</pvm>
+    <tekija>Mikko Lepp‰nen</tekija>
+    <opittu>hsdgfuhgsdf</opittu>
+    <haluanoppia>asdasd</haluanoppia>
+    <hyvaa>asdasdasdasd</hyvaa>
+    <parannettavaa>5</parannettavaa>
+    <muuta>6</muuta>
+  </palaute>
 </palautteet>

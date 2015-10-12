@@ -8,31 +8,35 @@
         Title="Anna Palautetta" Height="500" Width="800">
     <Grid>
         <TabControl x:Name="tabControl" Margin="10,10,0,0"  VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
-            <TabItem Header="TabItem">
+            <TabItem Header="Palaute1">
                 <Grid Background="#FFE5E5E5">
                     <Label x:Name="label" Content="Päivämäärä:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="label1" Content="Label" HorizontalAlignment="Left" Margin="98,10,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="lblDate" Content="Label" HorizontalAlignment="Left" Margin="98,10,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="label2" Content="Olen oppinut:" HorizontalAlignment="Left" Margin="10,192,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="label2_Copy1" Content="Haluan oppia:" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="label2_Copy4" Content="Nimi:" HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="98,41,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="229"/>
-                    <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="120" Margin="98,69,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="554"/>
-                    <TextBox x:Name="textBox_Copy1" HorizontalAlignment="Left" Height="120" Margin="98,194,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="554"/>
-                    <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="532,378,0,0" VerticalAlignment="Top" Width="120" Height="30"/>
+                    <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="23" Margin="98,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="229"/>
+                    <TextBox x:Name="txtLearned" HorizontalAlignment="Left" Height="120" Margin="98,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="554"/>
+                    <TextBox x:Name="txtWantToLearn" HorizontalAlignment="Left" Height="120" Margin="98,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="554"/>
+                    <Button x:Name="button" Content="Siirry eteenpäin" HorizontalAlignment="Left" Margin="532,378,0,0" VerticalAlignment="Top" Width="120" Height="30" Click="button_Click"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="TabItem">
+            <TabItem Header="Palaute2">
                 <Grid Background="#FFE5E5E5">
-                    <Label x:Name="label2_Copy" Content="Hyvää:" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="label2_Copy2" Content="Parannettavaa:" HorizontalAlignment="Left" Margin="10,133,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="label2_Copy3" Content="Muuta:" HorizontalAlignment="Left" Margin="10,258,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="textBox_Copy2" HorizontalAlignment="Left" Height="120" Margin="98,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="554"/>
-                    <TextBox x:Name="textBox_Copy3" HorizontalAlignment="Left" Height="120" Margin="98,135,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="554"/>
-                    <TextBox x:Name="textBox_Copy4" HorizontalAlignment="Left" Height="111" Margin="98,260,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="554"/>
-                    <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="532,378,0,0" VerticalAlignment="Top" Width="120" Height="30"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="7*"/>
+                        <ColumnDefinition Width="186*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="label2_Copy" Content="Hyvää:" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="26" Width="45"/>
+                    <Label x:Name="label2_Copy2" Content="Parannettavaa:" HorizontalAlignment="Left" Margin="10,133,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="26" Width="88"/>
+                    <Label x:Name="label2_Copy3" Content="Muuta:" HorizontalAlignment="Left" Margin="10,258,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="26" Width="47"/>
+                    <TextBox x:Name="txtGood" Height="120" Margin="75,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" HorizontalAlignment="Left" Width="554"/>
+                    <TextBox x:Name="txtBad" HorizontalAlignment="Left" Height="120" Margin="75,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="554" Grid.Column="1"/>
+                    <TextBox x:Name="txtOther" HorizontalAlignment="Left" Height="111" Margin="75,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="554" Grid.Column="1"/>
+                    <Button x:Name="button1" Content="Tallenna palaute" HorizontalAlignment="Left" Margin="509,378,0,0" VerticalAlignment="Top" Width="120" Height="30" Click="button1_Click" Grid.Column="1"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="TabItem" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="57">
+            <TabItem Header="Selaa palautteita" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="102" Margin="0,0,-45,0">
                 <Grid Background="#FFE5E5E5">
                     <DataGrid x:Name="dgFeedback" HorizontalAlignment="Left"  Margin="10,10,0,0" VerticalAlignment="Top" />
                 </Grid>
