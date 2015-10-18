@@ -33,15 +33,23 @@ namespace Tehtava8
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            data.writeDataToXml(txtName.Text, txtLearned.Text, txtWantToLearn.Text, txtGood.Text, txtBad.Text, txtOther.Text);
-            dgFeedback.ItemsSource = data.getDataFromXml();
-            txtBad.Text = "";
-            txtGood.Text = "";
-            txtLearned.Text = "";
-            txtName.Text = "";
-            txtOther.Text = "";
-            txtWantToLearn.Text = "";
-            tabControl.SelectedIndex = tabControl.SelectedIndex + 1;
+            if(txtBad.Text != "" && txtGood.Text != "" && txtLearned.Text != "" &&
+                txtName.Text != "" && txtOther.Text != "" && txtWantToLearn.Text != "" )
+            {
+                data.writeDataToXml(txtName.Text, txtLearned.Text, txtWantToLearn.Text, txtGood.Text, txtBad.Text, txtOther.Text);
+                dgFeedback.ItemsSource = data.getDataFromXml();
+                txtBad.Text = "";
+                txtGood.Text = "";
+                txtLearned.Text = "";
+                txtName.Text = "";
+                txtOther.Text = "";
+                txtWantToLearn.Text = "";
+                tabControl.SelectedIndex = tabControl.SelectedIndex + 1;
+            }
+            else
+            {
+                MessageBox.Show("Jokin kenttä on tyhjä.", "Virhe", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void button_Click(object sender, RoutedEventArgs e)

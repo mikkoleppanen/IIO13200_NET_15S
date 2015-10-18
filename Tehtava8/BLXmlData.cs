@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Xml.Linq;
 using System.Xml.Serialization;
 
@@ -21,36 +22,49 @@ namespace Tehtava8
         }
         public List<XmlDataModel> getDataFromXml()
         {
-            XElement xmlDoc = new XElement(XDocument.Load(xmlFilePath).Root);
-
-            list = (from el in xmlDoc.Descendants("palaute")
-                     select new XmlDataModel
-                     {
-                         date = el.Element("pvm").Value,
-                         name = el.Element("tekija").Value,
-                         learned = el.Element("opittu").Value,
-                         wantToLearn = el.Element("haluanoppia").Value,
-                         good = el.Element("hyvaa").Value,
-                         bad = el.Element("parannettavaa").Value,
-                         other = el.Element("muuta").Value
-                     }).ToList();
+            try
+            {
+                XElement xmlDoc = new XElement(XDocument.Load(xmlFilePath).Root);
+                list = (from el in xmlDoc.Descendants("palaute")
+                        select new XmlDataModel
+                        {
+                            date = el.Element("pvm").Value,
+                            name = el.Element("tekija").Value,
+                            learned = el.Element("opittu").Value,
+                            wantToLearn = el.Element("haluanoppia").Value,
+                            good = el.Element("hyvaa").Value,
+                            bad = el.Element("parannettavaa").Value,
+                            other = el.Element("muuta").Value
+                        }).ToList();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("XML-dokumenttia ei voitu avata.", "Virhe", MessageBoxButton.OK, MessageBoxImage.Error);
+            }            
 
             return list;
         }
 
         public void writeDataToXml(String name, String learned, String wantToLearn, String good, String bad, String other)
         {
-            XDocument doc = XDocument.Load(xmlFilePath);
-            XElement restaurant = new XElement("palaute",
-                new XElement("pvm", DateTime.Now.ToString("yyyyMMdd")),
-                new XElement("tekija", name),
-                new XElement("opittu", learned),
-                new XElement("haluanoppia", wantToLearn),
-                new XElement("hyvaa", good),
-                new XElement("parannettavaa", bad),
-                new XElement("muuta", other));
-            doc.Root.Add(restaurant);
-            doc.Save(xmlFilePath);
+            try
+            {
+                XDocument doc = XDocument.Load(xmlFilePath);
+                XElement restaurant = new XElement("palaute",
+                    new XElement("pvm", DateTime.Now.ToString("yyyyMMdd")),
+                    new XElement("tekija", name),
+                    new XElement("opittu", learned),
+                    new XElement("haluanoppia", wantToLearn),
+                    new XElement("hyvaa", good),
+                    new XElement("parannettavaa", bad),
+                    new XElement("muuta", other));
+                doc.Root.Add(restaurant);
+                doc.Save(xmlFilePath);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("XML-dokumenttia ei voitu avata.", "Virhe", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }
