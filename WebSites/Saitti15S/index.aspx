@@ -16,6 +16,8 @@
         <h1>To 29.10.2015</h1>
         <asp:hyperlink ID="hyperlink4" runat="server" NavigateUrl="~/DemoSql.aspx">Demo SqlDataSource</asp:hyperlink>
         <asp:hyperlink ID="hyperlink5" runat="server" NavigateUrl="~/DemoXml.aspx">Demo XmlDataSource</asp:hyperlink>
+        <h1>To 05.11.2015</h1>
+        <asp:hyperlink ID="hyperlink6" runat="server" NavigateUrl="~/IndexMP.aspx">Demo XmlDataSource</asp:hyperlink>
     </div>
     </form>
 </body>
